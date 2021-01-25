@@ -1,7 +1,9 @@
 # Public Playlist API Server
 The API server for the Public Playlist Project
 
-Made in GraphQL
+Uses GraphQL as the interface
+
+Made with Node.js and MongoDB as the database
 
 Checkout `public-playlist-client` for the front-end
 
