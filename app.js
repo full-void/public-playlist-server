@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 
 // connect with the db
-mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true}).catch()
 mongoose.connection.once('open', () => {
     console.log('Conneted to the database');
 });
