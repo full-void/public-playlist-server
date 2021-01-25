@@ -15,6 +15,7 @@ app.use(cors());
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(connect => console.log('Connected to MongoDB'))
     .catch(e => console.log('Couldn\'t connect to the Database. Error: \n', e))
+
 // bind express with graphql
 app.use('/graphql', graphqlHTTP({
     schema,
@@ -23,6 +24,7 @@ app.use('/graphql', graphqlHTTP({
 
 app.listen(process.env.PORT, { callback: () =>
 {
+    console.log("Database URL: ", process.env.DATABASE_URL)
     console.log(`Now listening for requests on port ${process.env.PORT}`);
 }
 });
